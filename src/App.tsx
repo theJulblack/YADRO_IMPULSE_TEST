@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { AddTaskForm } from './ui/AddTaskForm';
+import { Filters } from './ui/Filters';
+import { Search } from './ui/Search';
+import './index.css';
 
-function App() {
+export default function App() {  // Добавлен export default
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Менеджер задач</h1>
+      <AddTaskForm />
+      <Search />
+      <Filters />
     </div>
   );
 }
-
-export default App;
