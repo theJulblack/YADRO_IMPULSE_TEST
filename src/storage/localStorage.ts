@@ -1,10 +1,18 @@
-import { Task } from '../core/task';
-
-export const saveTasks = (tasks: Task[]) => {
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-};
-
-export const loadTasks = (): Task[] => {
-  const data = localStorage.getItem('tasks');
-  return data ? JSON.parse(data) : [];
+export const localStorage = {
+  get: <T>(key: string, defaultValue: T): T => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : defaultValue;
+    } catch (error) {
+      console.error('Error reading from localStorage', error);
+      return defaultValue;
+    }
+  },
+  set: <T>(key: string, value: T): void => {
+    try {
+      window.localStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.error('Error writing to localStorage', error);
+    }
+  }
 };
