@@ -29,7 +29,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/your-username/task-management-system.git 
+git clone https://github.com/theJulblack/YADRO_IMPULSE_TEST.git
 ```
     Установите зависимости:
 
