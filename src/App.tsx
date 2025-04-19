@@ -51,7 +51,7 @@ const App: React.FC = () => {
             className={styles.addButton}
             onClick={() => setShowForm(true)}
           >
-            + Добавить задачу
+          Добавить задачу
           </button>
           <TaskSearch onSearch={handleSearch} />
         </div>
@@ -70,7 +70,6 @@ const App: React.FC = () => {
   
         <TaskList 
           tasks={filteredTasks}
-          // groupBy={groupBy === 'tags' ? 'none' : groupBy}
         />
       </main>
     </div>

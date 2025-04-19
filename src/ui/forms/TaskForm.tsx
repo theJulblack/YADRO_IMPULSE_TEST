@@ -40,6 +40,11 @@ const TaskForm: React.FC<TaskFormProps> = ({ task, onSubmit, onCancel }) => {
       valid = false;
     }
 
+    if (!formData.dueDate) {
+      newErrors.dueDate = 'Выберите дату';
+      valid = false;
+    }
+
     if (formData.dueDate) {
       const today = new Date();
       today.setHours(0, 0, 0, 0);

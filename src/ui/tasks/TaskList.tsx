@@ -1,6 +1,6 @@
 import React from 'react';
 import { ITask } from '../../core/models/task';
-import { ITaskFilter } from '../../core/models/filter'; // Добавьте этот импорт
+import { ITaskFilter } from '../../core/models/filter';
 import TaskItem from './TaskItem';
 
 interface TaskListProps {

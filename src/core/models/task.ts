@@ -25,6 +25,13 @@ export interface ITaskForm {
   title: string;
   description?: string;
   priority: TaskPriority;
-  dueDate?: string; // Для формы используем string
+  dueDate?: string; 
   tags: string[];
+}
+
+export interface Task {
+  id: string;
+  text: string;
+  isCompleted: boolean;
+  dueDate: string; 
 }

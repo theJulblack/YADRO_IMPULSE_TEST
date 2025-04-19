@@ -20,4 +20,9 @@
     margin-bottom: 20px;
   }
 
-  
+  .addButton{
+    padding: 7px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px #0004 solid;
+  }
